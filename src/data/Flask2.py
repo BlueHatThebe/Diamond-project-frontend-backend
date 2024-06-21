@@ -43,16 +43,13 @@ def get_all_data():
                 device_id = device.get('id', '')
                 actuators = ','.join(str(actuator) for actuator in device.get('actuators', []))
                 sensors = ','.join(str(sensor) for sensor in device.get('sensors', []))
-                gateway_id = device.get('gateway_id', '')
-                domain = device.get('domain', '')
-                visibility = device.get('visibility', '')
-
+                
                 # Connect to MySQL
                 cur = mysql.connection.cursor()
 
                 # Insert data into `devices_data2` table
-                sql = "INSERT INTO devices_data2 (name, id, actuators, sensors, gateway_id, domain, visibility) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-                values = (name, device_id, actuators, sensors, gateway_id, domain, visibility)
+                sql = "INSERT INTO devices_data2 (name, id, actuators, sensors) VALUES (%s, %s, %s, %s)"
+                values = (name, device_id, actuators, sensors)
 
                 cur.execute(sql, values)
                 mysql.connection.commit()  # Commit changes

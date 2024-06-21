@@ -1,4 +1,3 @@
-// components/DataList.tsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -24,7 +23,9 @@ interface IDataItem {
 }
 
 const DataList: React.FC = () => {
-  const [data, setData] = useState<IDataItem | null>(null); // Initialize state as null
+  const [data, setData] = useState<IDataItem | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchData();
@@ -35,37 +36,36 @@ const DataList: React.FC = () => {
       const response = await axios.get<IDataItem>(
         "http://localhost:5000/api/data"
       );
-      console.log("Data from Flask API:", response.data);
-
-      setData(response.data); // Set data directly
+      setData(response.data);
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching data:", error);
+      setError("Error fetching data. Please try again later.");
+      setLoading(false);
     }
   };
 
-  console.log("Current data state:", data); // Log current data state
+  console.log("Current data state:", data);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div>
       <h2>Data Details</h2>
-      {data ? (
+      {data && (
         <div>
           <p>ID: {data.id}</p>
           <p>Name: {data.name}</p>
-          <p>Owner: {data.owner}</p>
-          <p>Date Created: {data.date_created}</p>
-          <p>Date Modified: {data.date_modified}</p>
-          <p>Domain: {data.domain}</p>
-          <p>Visibility: {data.visibility}</p>
           <p>
             Actuators:{" "}
-            {data.actuators.length > 0
+            {data.actuators && data.actuators.length > 0
               ? data.actuators.map((actuator) => actuator.name).join(", ")
               : "None"}
           </p>
           <p>Sensors:</p>
           <ul>
-            {data.sensors.length > 0 ? (
+            {data.sensors && data.sensors.length > 0 ? (
               data.sensors.map((sensor, index) => (
                 <li key={index}>
                   ID: {sensor.id}, Name: {sensor.name}, Quantity Kind:{" "}
@@ -87,8 +87,6 @@ const DataList: React.FC = () => {
             )}
           </ul>
         </div>
-      ) : (
-        <p>Loading...</p>
       )}
     </div>
   );
