@@ -45,7 +45,7 @@ const DataList: React.FC = () => {
 
   return (
     <div>
-      <h2>Data Details</h2>
+    
       {data && ( // Check if data exists
         <div>
           <p>Name: {data.name}</p>
@@ -57,7 +57,8 @@ const DataList: React.FC = () => {
             {data.sensors && data.sensors.length > 0 ? ( // Check if sensors is defined and has length
               data.sensors.map((sensor, index) => (
                 <li key={index}>
-                  ID: {sensor.id}, Name: {sensor.name},
+                  ID: {sensor.id} <br></br> 
+                  Name: {sensor.name},
                   {sensor.quantity_kind}
                   {sensor.value ? (
                     <ul>

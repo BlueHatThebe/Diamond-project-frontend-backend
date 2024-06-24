@@ -9,10 +9,10 @@ const Navbar = () => {
 
 	return (
 		<div className='container  w-full p-4 mx-auto'>
-			<div className='card bg-dark text-white rounded-3'>
+			<div className='card bg-dark  rounded-3'>
 				<div className='card-body'>
 					<ul className='nav justify-content-between'>
-						<li className='nav-item'>
+						<li className='nav-item text-white'>
 							<Link href='/' className='nav-link'>
 								Home
 							</Link>
