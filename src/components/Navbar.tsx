@@ -8,7 +8,7 @@ const Navbar = () => {
 	const { data: session } = useSession();
 
 	return (
-		<div className='container mt-4'>
+		<div className='container  w-full p-4 mx-auto'>
 			<div className='card bg-dark text-white rounded-3'>
 				<div className='card-body'>
 					<ul className='nav justify-content-between'>
@@ -18,6 +18,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<div className='d-flex gap-3'>
+							{" "}
 							<li className='nav-item'>
 								<Link href='/dashboard' className='nav-link'>
 									Dashboard
