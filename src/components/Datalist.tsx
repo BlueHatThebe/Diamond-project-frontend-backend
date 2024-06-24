@@ -60,6 +60,7 @@ const DataList: React.FC = () => {
                     <ul>
                       <li>
                         Value: {sensor.value.value} {sensor.value.unit}
+                        {"Metre"}
                       </li>
                       <li>Timestamp: {sensor.value.timestamp}</li>
                     </ul>

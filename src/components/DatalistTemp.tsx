@@ -54,12 +54,14 @@ const DataList: React.FC = () => {
             {data.sensors && data.sensors.length > 0 ? (
               data.sensors.map((sensor, index) => (
                 <li key={index}>
-                  ID: {sensor.id}, Name: {sensor.name}, Quantity Kind:{" "}
+                  ID: {sensor.id}, 
+                  Name: {sensor.name}, 
                   {sensor.quantity_kind}
                   {sensor.value ? (
                     <ul>
                       <li>
                         Value: {sensor.value.value} {sensor.value.unit}
+                        {"Degree Celcius"}
                       </li>
                       <li>Timestamp: {sensor.value.timestamp}</li>
                     </ul>
