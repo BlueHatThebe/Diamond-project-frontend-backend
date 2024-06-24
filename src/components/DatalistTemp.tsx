@@ -2,14 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 interface IDataItem {
-  id: number;
   name: string;
-  owner: string;
-  date_created: string;
-  date_modified: string;
-  domain: string;
-  visibility: string;
-  actuators: { name: string }[];
   sensors: {
     id: number;
     name: string;
@@ -55,14 +48,7 @@ const DataList: React.FC = () => {
       <h2>Data Details</h2>
       {data && (
         <div>
-          <p>ID: {data.id}</p>
           <p>Name: {data.name}</p>
-          <p>
-            Actuators:{" "}
-            {data.actuators && data.actuators.length > 0
-              ? data.actuators.map((actuator) => actuator.name).join(", ")
-              : "None"}
-          </p>
           <p>Sensors:</p>
           <ul>
             {data.sensors && data.sensors.length > 0 ? (
