@@ -4,10 +4,12 @@ import React from "react";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className=' text-center bg-dark'>
-			<div className='container p-4'></div>
+		<footer className='footer text-center bg-dark fixed bottom-0 w-full  text-lg-start'>
+			<div className=' container p-1'>
+				{/* Footer content goes here if needed */}
+			</div>
 
-			<div className='text-center p-3  text-white'>
+			<div className='text-center p-2 text-white'>
 				<p>&copy; 2024 Shiny Secure. All rights reserved.</p>
 			</div>
 		</footer>
