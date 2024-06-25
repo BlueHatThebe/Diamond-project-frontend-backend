@@ -16,7 +16,15 @@
 	}
 }
 
-/* body {
+.pic {
+	background-image: url("../public/color.jpg"); /* Use relative path to the image */
+	background-size: cover; /* Makes the image cover the entire div */
+	background-position: center; /* Centers the image */
+	height: 100vh; /* Example height, adjust as needed */
+} /* <- This closing brace was missing */
+
+/* Uncomment and adjust the body style if needed
+body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
 			to bottom,
@@ -40,3 +48,16 @@
 }
 
 /* Add more media queries as needed for different screen sizes */
+
+/* styles/globals.css */
+
+/* styles/globals.css */
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+}

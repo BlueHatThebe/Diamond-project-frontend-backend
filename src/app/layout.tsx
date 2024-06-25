@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { getServerSession } from "next-auth";
 import SessionProvider from "@/utils/SessionProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,16 +23,20 @@ export default async function RootLayout({
 	const session = await getServerSession();
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
-				<body>
-					<div className='background-container'></div>
+			<body>
+				<body className={`${inter.className} pic`}>
 					<SessionProvider session={session}>
-						<div className='mx-auto max-w-5xl text-2xl gap-2 mb-10'>
+						<div className='text-2xl gap-2'>
 							<Navbar />
+						</div>
+						<div className='mx-auto max-w-5xl text-2xl gap-2 mb-10'>
 							{children}
 						</div>
 					</SessionProvider>
 				</body>
+				<div className=''>
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

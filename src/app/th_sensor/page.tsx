@@ -5,11 +5,11 @@ import DataListTemp from "@/components/DatalistTemp";
 
 const Home = () => {
 	return (
-		<div
+		<div><div
 			className='card mx-auto mt-9'
 			style={{ maxWidth: "600px", borderRadius: "7px" }}>
-			<div className='p-16 card-body bg-gray-400'></div>
-			<div className='text-center p-10'>
+			
+			<div className=' p-10'>
 				<Head>
 					<title>Temperature and Humidity Display</title>
 					<meta
@@ -19,9 +19,9 @@ const Home = () => {
 					<link rel='icon' href='/favicon.ico' />
 				</Head>
 
-				<main>
+				<main >
 					<h1>Temperature and Humidity</h1>
-					<TemperatureHumidityDisplay />
+					
 					<DataListTemp />
 				</main>
 
@@ -30,6 +30,9 @@ const Home = () => {
 				</footer> */}
 			</div>
 		</div>
+
+		</div>
+		
 	);
 };
 
