@@ -26,9 +26,10 @@ export default async function RootLayout({
 			<body>
 				<body className={`${inter.className} pic`}>
 					<SessionProvider session={session}>
-						<div className='mx-auto max-w-5xl text-2xl gap-2 mb-10'>
+						<div className='text-2xl gap-2'>
 							<Navbar />
-
+						</div>
+						<div className='mx-auto max-w-5xl text-2xl gap-2 mb-10'>
 							{children}
 						</div>
 						<Footer />
