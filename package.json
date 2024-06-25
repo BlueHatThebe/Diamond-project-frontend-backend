@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "@types/node": "latest",
+    "@types/node": "20.14.8",
     "@types/react": "18.3.3",
     "@types/react-dom": "latest",
     "@types/react-gauge-chart": "^0.4.3",
