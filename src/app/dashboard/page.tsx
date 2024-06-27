@@ -2,6 +2,7 @@ import React from "react";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import Register from "../register/page";
 
 const Dashboard = async () => {
 	const session = await getServerSession();
@@ -19,15 +20,11 @@ const Dashboard = async () => {
 			<div className='grid grid-cols-2 gap-4'>
 				<div className='bg-gray-300 p-10 rounded shadow-md'>
 					<img
-						src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxektxFUJ0gfKyZzE4UAFtwWxBQaravEbhw&s'
-						className='background-position: place-items-center'
+						src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxektxFUJ0gfKyZzE4UAFtwWxBQaravEbhw&s ' 
+						className='background-position: place-items-center p-1 mb-2 mr-'
 						style={{ mixBlendMode: "multiply" }}
 					/>
-					<Link
-						className='block text-center text-black  mt-2'
-						href='/gas_sensor'>
-						Gas Sensor
-					</Link>
+				<Link href="gas_sensor" className=" block text-center no-underline text-black"> Gas Sensor</Link>
 				</div>
 				<div className='bg-gray-300 p-10 rounded shadow-md'>
 					<img
@@ -36,9 +33,9 @@ const Dashboard = async () => {
 						style={{ mixBlendMode: "multiply" }}
 					/>
 					<Link
-						className='block text-center text-black  mt-2'
+						className='block text-center text-black  mt-2 no-underline'
 						href='/th_sensor'>
-						TH Sensor
+						T&H Sensor
 					</Link>
 				</div>
 				<div className='bg-gray-300 p-10 rounded shadow-md'>
@@ -47,7 +44,7 @@ const Dashboard = async () => {
 						className='mr-2'
 						style={{ mixBlendMode: "multiply" }}
 					/>
-					<Link className='block text-center text-black  mt-2' href='/motion'>
+					<Link className='block text-center text-black no-underline  mt-2' href='/motion'>
 						Motion
 					</Link>
 				</div>
@@ -59,7 +56,7 @@ const Dashboard = async () => {
 					/>
 
 					<Link
-						className='block text-center text-black  mt-2'
+						className='block text-center text-black  mt-2 no-underline'
 						href='/data_chart'>
 						Data Chart
 					</Link>

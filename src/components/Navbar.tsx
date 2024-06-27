@@ -40,7 +40,7 @@ const Navbar = () => {
 								</>
 							) : (
 								<>
-									<li className='nav-item nav-link'>{session.user?.email}</li>
+									
 									<li className='nav-item'>
 										<button
 											onClick={() => {
