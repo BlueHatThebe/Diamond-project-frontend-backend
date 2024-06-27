@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
@@ -13,9 +14,16 @@ const Navbar = () => {
 				<div className='card-body'>
 					<ul className='nav justify-content-between'>
 						<li className='nav-item text-white  '>
-							<Link href='/' className='nav-link text-white'>
-								Home
-							</Link>
+							{!session ? (
+								<Link href='/' className='nav-link text-white'>
+									Home
+								</Link>
+							) : (
+								<Link href='/dashboard' className='nav-link text-white'>
+									{" "}
+									<FaArrowAltCircleLeft />
+								</Link>
+							)}
 						</li>
 						<div className='d-flex gap-3'>
 							{session && (
@@ -40,7 +48,6 @@ const Navbar = () => {
 								</>
 							) : (
 								<>
-									
 									<li className='nav-item'>
 										<button
 											onClick={() => {
