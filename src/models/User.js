@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
+const punycode = require('punycode');
+
+
+
 const userSchema = new Schema(
 	{
 		fullName: {
