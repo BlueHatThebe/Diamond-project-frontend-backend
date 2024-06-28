@@ -9,7 +9,7 @@ const Navbar = () => {
 	const { data: session } = useSession();
 
 	return (
-		<nav className='navbar navbar-dark navbar-expand-lg bg-dark'>
+		<nav className='navbar navbar-dark navbar-expand-lg bg-dark fixed top-2 left- right-2'>
 			<div className='container-fluid d-flex justify-content-between align-items-center'>
 				<div className='d-flex align-items-center'>
 					{!session ? (
