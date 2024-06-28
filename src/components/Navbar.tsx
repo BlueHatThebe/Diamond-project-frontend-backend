@@ -1,9 +1,7 @@
 "use client";
-// Import necessary libraries and CSS
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
-import { FaArrowCircleLeft } from "react-icons/fa"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -32,7 +30,7 @@ const Navbar = () => {
                         </Link>
                     ) : (
                         <Link href='/dashboard' passHref className="no-underline">
-                            <span className={`nav-link ${navLinkClasses}`}><FaArrowCircleLeft /></span>
+                            <span className={`nav-link ${navLinkClasses}`}>Dashboard</span>
                         </Link>
                     )}
                 </div>
@@ -41,7 +39,7 @@ const Navbar = () => {
                     {session ? (
                         <li className='nav-item dropdown'>
                             <div
-                                className="nav-link dropdown-toggle text-white"
+                                className="nav-link text-white"
                                 id="navbarDropdownMenuAvatar"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -57,7 +55,7 @@ const Navbar = () => {
                             </div>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                                 <li>
-                                    <Link href="/profile">
+                                    <Link href="/profile" passHref className="no-underline">
                                         <span className={dropdownLinkClasses}>My Profile</span>
                                     </Link>
                                 </li>
