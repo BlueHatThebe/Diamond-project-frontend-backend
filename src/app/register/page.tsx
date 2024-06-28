@@ -21,8 +21,14 @@ const Register = () => {
 	};
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-		const email = e.target[0].value;
-		const password = e.target[1].value;
+		const fullName = e.target[0].value;
+		const email = e.target[1].value;
+		const password = e.target[2].value;
+
+		if (!fullName) {
+			setError("Full name is required");
+			return;
+		}
 
 		if (!isValidEmail(email)) {
 			setError("Email is valid");
@@ -41,6 +47,7 @@ const Register = () => {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
+					fullName,
 					email,
 					password,
 				}),
@@ -59,7 +66,7 @@ const Register = () => {
 	};
 
 	if (sessionStatus === "loading") {
-		return <h1>Loading...</h1>;
+		return <h1 className='text-white'>Loading...</h1>;
 	}
 
 	return (
@@ -70,7 +77,13 @@ const Register = () => {
 						Register
 					</h1>
 					<form onSubmit={handleSubmit}>
-						
+						<input
+							type='text'
+							className='w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black'
+							placeholder='Full Name'
+							required
+						/>
+
 						<input
 							type='text'
 							className='w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black'
