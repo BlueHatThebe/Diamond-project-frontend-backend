@@ -13,7 +13,7 @@ const Dashboard = async () => {
 	return (
 		<div className='relative'>
 			{/* Dashboard title */}
-			<h1 className='flex flex-col items-center justify-between p-20 text-white'>
+			<h1 className='flex flex-col items-center justify-between p-20 text-white max-w-6xl'>
 				Dashboard
 			</h1>
 			{/* <div className='bg-[#838080] p-10 rounded shadow-md gap-4'></div> */}

@@ -1,33 +1,28 @@
-// pages/Profile.tsx
-
 import React from "react";
+import Avatar from "@/components/avatar";
 
-const Profile = () => {
-	// Hardcoded user data for demonstration
-	const user = {
-		name: "John Doe",
-		email: "john.doe@example.com",
-		bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		avatar: "https://randomuser.me/api/portraits/men/1.jpg", // Example image
-	};
-
+const ProfilePage: React.FC = () => {
 	return (
-		<div className='container mx-auto p-20'>
-			<div className=' mx-auto bg-white rounded-xl overflow-hidden shadow-md'>
-				<div className='md:flex'>
-					<div className='md:flex-shrink-0'>
-						<img
-							className='h-48 w-full object-cover md:w-48'
-							src={user.avatar}
+		<div>
+			<h2 className='text-center text-4xl underline font-semibold mb-6 text-white'>
+				Employee Profile
+			</h2>
+			<div className=' flex items-center justify-center'>
+				<div className='bg-dark text-white rounded-lg shadow-md p-6 w-full max-w-3xl'>
+					<div className='flex flex-col items-center'>
+						<Avatar
+							src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLU5_eUUGBfxfxRd4IquPiEwLbt4E_6RYMw&s'
 							alt='User Avatar'
 						/>
-					</div>
-					<div className='p-8'>
-						<div className='uppercase tracking-wide text-sm text-indigo-500 font-semibold'>
-							{user.name}
+						<h1 className='text-xl font-bold mb-2'>John Doe</h1>
+						<div className='w-full bg-white rounded-lg p-4 mb-4'>
+							<h4 className='text-gray-900 text-lg'>Company:</h4>
+							<p className='text-gray-700'>Your Company Name</p>
 						</div>
-						<p className='mt-2 text-gray-500'>{user.email}</p>
-						<p className='mt-2'>{user.bio}</p>
+						<div className='w-full bg-white rounded-lg p-4'>
+							<h4 className='text-gray-900 text-lg'>Employee Details:</h4>
+							<p className='text-gray-700'>Details about the employee</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -35,4 +30,4 @@ const Profile = () => {
 	);
 };
 
-export default Profile;
+export default ProfilePage;
