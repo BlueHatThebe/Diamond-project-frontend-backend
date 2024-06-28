@@ -1,6 +1,4 @@
 "use client";
-// components/Navbar.js
-
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
@@ -45,9 +43,13 @@ const Navbar = () => {
                                 onClick={(e) => e.preventDefault()}
                             >
                                 <img
-                                    src=""
-                                    className="rounded-circle"
-                                    height="15"
+                                    src="https://cdn.create.vista.com/api/media/small/475532336/stock-vector-people-icon-person-icon-user-icon-vector-illustration-graphic-design"
+                                    style={{
+                                        width: '50px',
+                                        height: '50px',
+                                        borderRadius: '50%', 
+                                        objectFit: 'fill', 
+                                    }}
                                     alt="Avatar"
                                     loading="lazy"
                                 />
