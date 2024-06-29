@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className='footer text-center mt-20 bg-dark bottom-0 w-full  text-lg-start'>
+		<footer className='footer text-center mt-20 bg-dark bottom-0 w-full position-fixed text-lg-start'>
 			<div className=' container p-1'>
 				{/* Footer content goes here if needed */}
 			</div>
