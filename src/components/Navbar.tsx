@@ -4,6 +4,7 @@ import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
+import dynamic from 'next/dynamic'
 
 const Navbar = () => {
 	const { data: session } = useSession();

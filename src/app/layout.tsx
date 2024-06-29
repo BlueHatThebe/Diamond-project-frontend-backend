@@ -8,6 +8,7 @@ import SessionProvider from "@/utils/SessionProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/components/Footer";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default async function RootLayout({
 }) {
 	const session = await getServerSession();
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning={true}>
 			<body>
 				<body className={`${inter.className} pic`}>
 					<SessionProvider session={session}>
