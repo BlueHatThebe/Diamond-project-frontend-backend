@@ -29,7 +29,7 @@ export default async function RootLayout({
 						<div className='text-2xl gap-2'>
 							<Navbar />
 						</div>
-						<div className=' ml-2 mr-2 mx-auto  text-2xl gap-2 mb-10'>
+						<div className=' ml-2 mr-2 mx-auto max-w-5xl text-2xl gap-2 mb-10'>
 							{children}
 						</div>
 						<div className=''>
