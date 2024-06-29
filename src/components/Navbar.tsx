@@ -4,9 +4,7 @@ import Link from "next/link";
 import { FaArrowCircleLeft}  from "react-icons/fa"
 import { signOut, useSession } from "next-auth/react";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
 import dynamic from 'next/dynamic'
-=======
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Tailwind CSS classes for styling
