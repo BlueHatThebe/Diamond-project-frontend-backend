@@ -1,17 +1,14 @@
 "use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { FaArrowCircleLeft}  from "react-icons/fa"
 import { signOut, useSession } from "next-auth/react";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
-import dynamic from 'next/dynamic'
-=======
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Tailwind CSS classes for styling
 const navLinkClasses = "text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white no-underline";
 const dropdownLinkClasses = "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 no-underline";
->>>>>>> 24f4b8c31f2d8f59d5d2a90a6f71e24d8fb56f44
 
 const Navbar = () => {
     const { data: session } = useSession();
@@ -25,7 +22,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className='navbar navbar-dark navbar-expand-lg bg-dark'>
+        <nav className='navbar navbar-dark navbar-expand-lg bg-dark z-50 fixed w-full'>
             <div className='container-fluid d-flex justify-content-between align-items-center'>
                 <div className='d-flex align-items-center'>
                     {!session ? (
@@ -34,7 +31,7 @@ const Navbar = () => {
                         </Link>
                     ) : (
                         <Link href='/dashboard' passHref className="no-underline">
-                            <span className={`nav-link ${navLinkClasses}`}>Dashboard</span>
+                            <span className={`nav-link ${navLinkClasses}`}><FaArrowCircleLeft /></span>
                         </Link>
                     )}
                 </div>

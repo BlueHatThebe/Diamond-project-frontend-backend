@@ -68,6 +68,6 @@ body {
 	}
 }
 
-.nav{
-	
+.container{
+	position: fixed;
 }
