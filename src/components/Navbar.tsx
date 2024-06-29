@@ -3,15 +3,12 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
 import dynamic from 'next/dynamic'
-=======
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Tailwind CSS classes for styling
 const navLinkClasses = "text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white no-underline";
 const dropdownLinkClasses = "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 no-underline";
->>>>>>> 24f4b8c31f2d8f59d5d2a90a6f71e24d8fb56f44
 
 const Navbar = () => {
     const { data: session } = useSession();
