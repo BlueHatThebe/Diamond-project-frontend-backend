@@ -1,9 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { FaArrowCircleLeft}  from "react-icons/fa"
 import { signOut, useSession } from "next-auth/react";
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
 import dynamic from 'next/dynamic'
+=======
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Tailwind CSS classes for styling
@@ -22,7 +25,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className='navbar navbar-dark navbar-expand-lg bg-dark'>
+        <nav className='navbar navbar-dark navbar-expand-lg bg-dark z-50 fixed w-full'>
             <div className='container-fluid d-flex justify-content-between align-items-center'>
                 <div className='d-flex align-items-center'>
                     {!session ? (
@@ -31,7 +34,7 @@ const Navbar = () => {
                         </Link>
                     ) : (
                         <Link href='/dashboard' passHref className="no-underline">
-                            <span className={`nav-link ${navLinkClasses}`}>Dashboard</span>
+                            <span className={`nav-link ${navLinkClasses}`}><FaArrowCircleLeft /></span>
                         </Link>
                     )}
                 </div>
