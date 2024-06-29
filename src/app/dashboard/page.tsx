@@ -13,15 +13,17 @@ const Dashboard = async () => {
 	return (
 		<div className='relative'>
 			{/* Dashboard title */}
-			<h1 className='flex flex-col items-center justify-between p-20 text-white'>
+			<div className='flex flex-col items-center justify-center text-white'> 
+			<h1 className=''>
 				Dashboard
 			</h1>
+			</div>
 			{/* <div className='bg-[#838080] p-10 rounded shadow-md gap-4'></div> */}
-			<div className='grid grid-cols-2 gap-4'>
-				<div className='bg-gray-300 p-10 rounded shadow-md'>
+			<div className='grid grid-cols-2 gap-4 me-4 ms-4 '>
+				<div className=' bg-gray-300  rounded shadow-md text-center justify-center '>
 					<img
 						src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxektxFUJ0gfKyZzE4UAFtwWxBQaravEbhw&s '
-						className='background-position: place-items-center p-1 mb-2 mr-'
+						className='background-position: place-items-center p-1 mb-2 '
 						style={{ mixBlendMode: "multiply" }}
 					/>
 					<Link
