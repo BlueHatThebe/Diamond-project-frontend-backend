@@ -69,6 +69,7 @@ const Dashboard = async () => {
 						href='/data_chart'>
 						Data Chart
 					</Link>
+					<br></br>
 				</div>
 			</div>
 		</div>
