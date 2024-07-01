@@ -8,7 +8,7 @@ const Home = () => {
 		<div>
 			<h1 className=' text-center text-white'>T&H Sensor</h1>
 			<div
-				className='card mx-auto mt-9'
+				className='card mx-auto mt-9 bg-gray-400'
 				style={{ maxWidth: "600px", borderRadius: "7px" }}>
 				<div className=' p-10'>
 					<Head>
