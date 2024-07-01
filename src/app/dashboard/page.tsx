@@ -19,7 +19,7 @@ const Dashboard = async () => {
 			</h1>
 			</div>
 			{/* <div className='bg-[#838080] p-10 rounded shadow-md gap-4'></div> */}
-			<div className='grid grid-cols-2 gap-4 me-2 ms-2  '>
+			<div className='grid grid-cols-2 grid-rows-3 gap-4 me-2 ms-2  '>
 				<div className=' bg-gray-300  rounded shadow-md flex flex-col items-center justify-center text-center '>
 					<img
 						src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1M7YXICypUewVIyBNUQD8ZMIGy6AoI3T-w&s '
@@ -69,10 +69,29 @@ const Dashboard = async () => {
 						href='/data_chart'>
 						Data Chart
 					</Link>
-					<br></br>
+	
+					</div> 
+					
+					<div className=' bg-gray-300  rounded shadow-md flex flex-col items-center justify-center text-center'> 
+					<div className='block text-center text-black  mt-2 no-underline'></div>
+						
+						
+						<img
+						src='https://static.thenounproject.com/png/1254-200.png'
+						className='mr-2'
+						style={{ mixBlendMode: "multiply" }}
+					/>
+					<Link
+						className='block text-center text-black  mt-2 no-underline'
+						href='/Surveillance'>
+						Surveillance
+					</Link>
+					</div>	
+				 </div>
+                    
 				</div>
-			</div>
-		</div>
+			
+		
 	);
 };
 
