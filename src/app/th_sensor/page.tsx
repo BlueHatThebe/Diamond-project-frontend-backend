@@ -17,7 +17,7 @@ const Home = () => {
 							name='description'
 							content='Display temperature and humidity sensor data.'
 						/>
-						<link rel='icon' href='/favicon.ico' />
+						<link rel='icon' href='/src/public/Your paragraph text/3.png' />
 					</Head>
 
 					<main>
