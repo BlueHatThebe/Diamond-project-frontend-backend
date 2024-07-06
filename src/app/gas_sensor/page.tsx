@@ -24,7 +24,7 @@ const GasSensor: React.FC = () => {
 			className='card mx-auto mt-9 '
 			style={{ maxWidth: "600px", borderRadius: "8px" }}>
 			<div className='p-16 card-body bg-gray-400'>
-				<h1 className='card-title text-center p-10'>Gas Descriptions</h1>
+				<h1 className='card-title text-center p-10'>Gas Description</h1>
 				<GaugeChartComponent
 					id='performance-gauge'
 					percent={performanceData}
